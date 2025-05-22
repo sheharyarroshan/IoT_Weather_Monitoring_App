@@ -12,22 +12,23 @@ class WeatherLogCard extends StatelessWidget {
     final time = DateFormat('yyyy-MM-dd – hh:mm a').format(weather.timestamp);
 
     return Container(
-      padding: const EdgeInsets.all(14),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.3),
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: Colors.white38),
+        color: Colors.white.withOpacity(0.2),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.white.withOpacity(0.3)),
         boxShadow: [
           BoxShadow(
             blurRadius: 12,
-            color: Colors.black.withOpacity(0.08),
-            offset: const Offset(0, 6),
+            color: Colors.black.withOpacity(0.1),
+            offset: const Offset(0, 4),
           ),
         ],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          // Weather Info
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -35,16 +36,23 @@ class WeatherLogCard extends StatelessWidget {
                 "🌡 ${weather.temperature.toStringAsFixed(1)} °C",
                 style: const TextStyle(
                   fontSize: 18,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
                 ),
               ),
+              const SizedBox(height: 4),
               Text(
                 "💧 ${weather.humidity.toStringAsFixed(1)} %",
-                style: const TextStyle(fontSize: 16, color: Colors.white),
+                style: const TextStyle(fontSize: 16, color: Colors.white70),
               ),
             ],
           ),
-          Text(time, style: const TextStyle(fontSize: 13, color: Colors.white)),
+          // Time
+          Text(
+            time,
+            style: const TextStyle(fontSize: 13, color: Colors.white),
+            textAlign: TextAlign.end,
+          ),
         ],
       ),
     );

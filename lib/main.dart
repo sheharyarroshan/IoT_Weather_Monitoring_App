@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:iot_project/screens/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'providers/weather_provider.dart';
 import 'screens/home_screen.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           ),
           fontFamily: 'Roboto',
         ),
-        home: const HomeScreen(),
+        home: const SplashScreen(),
         debugShowCheckedModeBanner: false,
       ),
     );

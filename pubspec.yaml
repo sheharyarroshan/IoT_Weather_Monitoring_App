@@ -41,7 +41,11 @@ dependencies:
   flutterfire_cli: ^1.2.0
   provider: ^6.0.5
   lottie: ^2.2.0
-  glassmorphism: ^3.0.0
+  google_fonts: ^4.0.3
+  fl_chart: ^0.64.0
+  intl: ^0.18.1
+  flutter_local_notifications: ^16.2.0
+
 
 dev_dependencies:
   flutter_test:
@@ -66,7 +70,7 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  
+
   assets:
     - assets/animations/sunny.json
     - assets/animations/cloudy.json
